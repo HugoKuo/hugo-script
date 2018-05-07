@@ -1,0 +1,744 @@
+[
+  {
+    "_id": "240db8a0-2bc9-11e8-a543-0f193ce61c46",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Tellus Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"2\",\"gridData\":{\"x\":6,\"y\":0,\"w\":6,\"h\":3,\"i\":\"2\"},\"embeddableConfig\":{\"spy\":null},\"id\":\"18f732e0-2bc7-11e8-a543-0f193ce61c46\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":0,\"w\":6,\"h\":3,\"i\":\"3\"},\"id\":\"a65d4fa0-2bdd-11e8-a543-0f193ce61c46\",\"type\":\"visualization\",\"version\":\"6.2.2\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "acb52c20-445a-11e8-a543-0f193ce61c46",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Auditor Analyzer",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"w\":6,\"h\":3,\"x\":0,\"y\":0,\"i\":\"1\"},\"version\":\"6.2.2\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"id\":\"6064bc00-445a-11e8-a543-0f193ce61c46\"},{\"gridData\":{\"w\":6,\"h\":3,\"x\":6,\"y\":0,\"i\":\"2\"},\"version\":\"6.2.2\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"id\":\"5fca4300-4455-11e8-a543-0f193ce61c46\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true,\"hidePanelTitles\":false}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "8df25ec0-3721-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "1-2 All logs of a transactionID",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "status_int",
+        "programname",
+        "request_method",
+        "request_path",
+        "request_time",
+        "transaction_id",
+        "remote_addr"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"transaction_id\",\"value\":\"Insert_trans_ID_here\",\"params\":{\"query\":\"Insert_trans_ID_here\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"transaction_id\":{\"query\":\"Insert_trans_ID_here\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "1d0504f0-39a7-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "Rubrik_S3_Get_issue",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"request_path\",\"value\":\"*sd-deps*\",\"params\":{\"query\":\"*sd-deps*\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"request_path\":{\"query\":\"*sd-deps*\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "d5176720-4214-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "2-1 Upload Failed in a week",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "status_int",
+        "transaction_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n  \"highlightAll\": true,\n  \"version\": true,\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  },\n  \"filter\": [\n    {\n      \"meta\": {\n        \"negate\": false,\n        \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n        \"type\": \"phrase\",\n        \"key\": \"programname\",\n        \"value\": \"proxy-server\",\n        \"params\": {\n          \"query\": \"proxy-server\",\n          \"type\": \"phrase\"\n        },\n        \"disabled\": false,\n        \"alias\": null\n      },\n      \"query\": {\n        \"match\": {\n          \"programname\": {\n            \"query\": \"proxy-server\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    },\n    {\n      \"meta\": {\n        \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n        \"negate\": false,\n        \"disabled\": false,\n        \"alias\": null,\n        \"type\": \"phrase\",\n        \"key\": \"request_method\",\n        \"value\": \"PUT\",\n        \"params\": {\n          \"query\": \"PUT\",\n          \"type\": \"phrase\"\n        }\n      },\n      \"query\": {\n        \"match\": {\n          \"request_method\": {\n            \"query\": \"PUT\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    },\n    {\n      \"meta\": {\n        \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n        \"type\": \"phrases\",\n        \"key\": \"status_int\",\n        \"value\": \"200, 201, 202\",\n        \"params\": [\n          \"200\",\n          \"201\",\n          \"202\"\n        ],\n        \"negate\": true,\n        \"disabled\": false,\n        \"alias\": null\n      },\n      \"query\": {\n        \"bool\": {\n          \"should\": [\n            {\n              \"match_phrase\": {\n                \"status_int\": \"200\"\n              }\n            },\n            {\n              \"match_phrase\": {\n                \"status_int\": \"201\"\n              }\n            },\n            {\n              \"match_phrase\": {\n                \"status_int\": \"202\"\n              }\n            }\n          ],\n          \"minimum_should_match\": 1\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    }\n  ]\n}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "e08ed110-371f-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "1-1 [Find Long Trans Time] PUT requests time sorting",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_time",
+        "bytes_recvd",
+        "transaction_id",
+        "request_path"
+      ],
+      "sort": [
+        "request_time",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n  \"highlightAll\": true,\n  \"version\": true,\n  \"query\": {\n    \"language\": \"lucene\",\n    \"query\": \"\"\n  },\n  \"filter\": [\n    {\n      \"$state\": {\n        \"store\": \"appState\"\n      },\n      \"meta\": {\n        \"alias\": null,\n        \"disabled\": false,\n        \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n        \"key\": \"programname\",\n        \"negate\": false,\n        \"params\": {\n          \"query\": \"proxy-server\",\n          \"type\": \"phrase\"\n        },\n        \"type\": \"phrase\",\n        \"value\": \"proxy-server\"\n      },\n      \"query\": {\n        \"match\": {\n          \"programname\": {\n            \"query\": \"proxy-server\",\n            \"type\": \"phrase\"\n          }\n        }\n      }\n    },\n    {\n      \"meta\": {\n        \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n        \"negate\": false,\n        \"disabled\": false,\n        \"alias\": null,\n        \"type\": \"phrase\",\n        \"key\": \"request_method\",\n        \"value\": \"PUT\",\n        \"params\": {\n          \"query\": \"PUT\",\n          \"type\": \"phrase\"\n        }\n      },\n      \"query\": {\n        \"match\": {\n          \"request_method\": {\n            \"query\": \"PUT\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    },\n    {\n      \"meta\": {\n        \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n        \"negate\": false,\n        \"disabled\": false,\n        \"alias\": null,\n        \"type\": \"phrase\",\n        \"key\": \"status_int\",\n        \"value\": \"201\",\n        \"params\": {\n          \"query\": \"201\",\n          \"type\": \"phrase\"\n        }\n      },\n      \"query\": {\n        \"match\": {\n          \"status_int\": {\n            \"query\": \"201\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    }\n  ]\n}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "480873a0-4215-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "2-2 Download Failed in a week",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "status_int",
+        "transaction_id"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"type\":\"phrase\",\"key\":\"programname\",\"value\":\"proxy-server\",\"params\":{\"query\":\"proxy-server\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"programname\":{\"query\":\"proxy-server\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"request_method\",\"value\":\"GET\",\"params\":{\"query\":\"GET\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"request_method\":{\"query\":\"GET\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"status_int\",\"value\":\"200\",\"params\":{\"query\":\"200\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"status_int\":{\"query\":\"200\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "c6f806d0-4215-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "3-2 507 PUT Malfunction (Resource Unavailable)",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "status_int",
+        "programname",
+        "request_method",
+        "remote_addr"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"status_int\",\"value\":\"507\",\"params\":{\"query\":\"507\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"status_int\":{\"query\":\"507\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"request_method\",\"value\":\"PUT\",\"params\":{\"query\":\"PUT\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"request_method\":{\"query\":\"PUT\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "2cdb1870-4216-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "3-5 507 UNKNOWN Malfunction (Resource Unavailable)",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "status_int",
+        "programname",
+        "request_method",
+        "remote_addr"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"status_int\",\"value\":\"507\",\"params\":{\"query\":\"507\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"status_int\":{\"query\":\"507\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"type\":\"phrases\",\"key\":\"request_method\",\"value\":\"GET, PUT, DELETE, HEAD\",\"params\":[\"GET\",\"PUT\",\"DELETE\",\"HEAD\"],\"negate\":true,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"request_method\":\"GET\"}},{\"match_phrase\":{\"request_method\":\"PUT\"}},{\"match_phrase\":{\"request_method\":\"DELETE\"}},{\"match_phrase\":{\"request_method\":\"HEAD\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "af546410-4215-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "3-1 507 GET Malfunction (Resource Unavailable)",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "status_int",
+        "programname",
+        "request_method",
+        "remote_addr"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n  \"highlightAll\": true,\n  \"version\": true,\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  },\n  \"filter\": [\n    {\n      \"meta\": {\n        \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n        \"negate\": false,\n        \"disabled\": false,\n        \"alias\": null,\n        \"type\": \"phrase\",\n        \"key\": \"status_int\",\n        \"value\": \"507\",\n        \"params\": {\n          \"query\": \"507\",\n          \"type\": \"phrase\"\n        }\n      },\n      \"query\": {\n        \"match\": {\n          \"status_int\": {\n            \"query\": \"507\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    },\n    {\n      \"meta\": {\n        \"negate\": false,\n        \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n        \"type\": \"phrase\",\n        \"key\": \"request_method\",\n        \"value\": \"GET\",\n        \"params\": {\n          \"query\": \"GET\",\n          \"type\": \"phrase\"\n        },\n        \"disabled\": false,\n        \"alias\": null\n      },\n      \"query\": {\n        \"match\": {\n          \"request_method\": {\n            \"query\": \"GET\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    }\n  ]\n}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ecc63800-4215-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "3-4 507 HEAD Malfunction (Resource Unavailable)",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "status_int",
+        "programname",
+        "request_method",
+        "remote_addr"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n  \"highlightAll\": true,\n  \"version\": true,\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  },\n  \"filter\": [\n    {\n      \"meta\": {\n        \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n        \"negate\": false,\n        \"disabled\": false,\n        \"alias\": null,\n        \"type\": \"phrase\",\n        \"key\": \"status_int\",\n        \"value\": \"507\",\n        \"params\": {\n          \"query\": \"507\",\n          \"type\": \"phrase\"\n        }\n      },\n      \"query\": {\n        \"match\": {\n          \"status_int\": {\n            \"query\": \"507\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    },\n    {\n      \"meta\": {\n        \"index\": \"940f6b30-2bba-11e8-a543-0f193ce61c46\",\n        \"negate\": false,\n        \"disabled\": false,\n        \"alias\": null,\n        \"type\": \"phrase\",\n        \"key\": \"request_method\",\n        \"value\": \"HEAD\",\n        \"params\": {\n          \"query\": \"HEAD\",\n          \"type\": \"phrase\"\n        }\n      },\n      \"query\": {\n        \"match\": {\n          \"request_method\": {\n            \"query\": \"HEAD\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    }\n  ]\n}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "63f92200-4218-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "4-2 Object Replication ERROR - exclude rsync",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "programname",
+        "message",
+        "severity"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"programname\",\"value\":\"object-replicator\",\"params\":{\"query\":\"object-replicator\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"programname\":{\"query\":\"object-replicator\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"type\":\"phrase\",\"key\":\"severity\",\"value\":\"err\",\"params\":{\"query\":\"err\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"severity\":{\"query\":\"err\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"message\",\"value\":\"rsync\",\"params\":{\"query\":\"rsync\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"message\":{\"query\":\"rsync\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "114fb430-4216-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "3-3 507 DELETE Malfunction (Resource Unavailable)",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "status_int",
+        "programname",
+        "request_method",
+        "remote_addr"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"status_int\",\"value\":\"507\",\"params\":{\"query\":\"507\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"status_int\":{\"query\":\"507\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"request_method\",\"value\":\"DELETE\",\"params\":{\"query\":\"DELETE\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"request_method\":{\"query\":\"DELETE\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "3f95a460-4218-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "4-1 Object Replication ERROR",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "programname",
+        "message",
+        "severity"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"programname\",\"value\":\"object-replicator\",\"params\":{\"query\":\"object-replicator\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"programname\":{\"query\":\"object-replicator\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"type\":\"phrase\",\"key\":\"severity\",\"value\":\"err\",\"params\":{\"query\":\"err\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"severity\":{\"query\":\"err\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "5b4c9000-4219-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "3-2 Insufficient Storage ERROR",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "message",
+        "programname"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"ERROR\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"message\",\"value\":\"Insufficient Storage\",\"params\":{\"query\":\"Insufficient Storage\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"message\":{\"query\":\"Insufficient Storage\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "7c1af530-42b7-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "[naming] Replication Cycle Time for all nodes",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "sysloghost",
+        "PartitionReplicatedRate",
+        "ReplicatedPartitionsNum",
+        "message"
+      ],
+      "sort": [
+        "@timestamp",
+        "asc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"programname\",\"negate\":false,\"params\":{\"query\":\"object-replicator\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"object-replicator\"},\"query\":{\"match\":{\"programname\":{\"query\":\"object-replicator\",\"type\":\"phrase\"}}}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"type\":\"phrases\",\"key\":\"message\",\"value\":\"Object replication complete, (100.00%) partitions\",\"params\":[\"Object replication complete\",\"(100.00%) partitions\"],\"negate\":false,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"message\":\"Object replication complete\"}},{\"match_phrase\":{\"message\":\"(100.00%) partitions\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"globalState\"}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"exists\",\"key\":\"sysloghost\",\"value\":\"exists\"},\"exists\":{\"field\":\"sysloghost\"},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "07919390-43b6-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "[naming] Object-Auditor complete logs",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "AuditType",
+        "AuditCompletedSeconds",
+        "TotalAuditFilesPerSec",
+        "TotalAuditingTime",
+        "AuditRate",
+        "TotalAuditRate"
+      ],
+      "sort": [
+        "@timestamp",
+        "asc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"type\":\"phrase\",\"key\":\"programname\",\"value\":\"object-auditor\",\"params\":{\"query\":\"object-auditor\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"programname\":{\"query\":\"object-auditor\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"type\":\"phrase\",\"key\":\"sysloghost\",\"value\":\"sac-tellus-paco02\",\"params\":{\"query\":\"sac-tellus-paco02\",\"type\":\"phrase\"},\"disabled\":true,\"alias\":null},\"query\":{\"match\":{\"sysloghost\":{\"query\":\"sac-tellus-paco02\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":true,\"alias\":null,\"type\":\"phrase\",\"key\":\"AuditType\",\"value\":\"ZBF\",\"params\":{\"query\":\"ZBF\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"AuditType\":{\"query\":\"ZBF\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":true,\"alias\":null,\"type\":\"phrase\",\"key\":\"AuditType\",\"value\":\"ALL\",\"params\":{\"query\":\"ALL\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"AuditType\":{\"query\":\"ALL\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"message\",\"value\":\"mode completed:\",\"params\":{\"query\":\"mode completed:\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"message\":{\"query\":\"mode completed:\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "627bf370-42be-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "[naming] Replication Complete",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "sysloghost",
+        "PartitionReplicatedRate",
+        "ReplicatedPartitionsNum",
+        "message"
+      ],
+      "sort": [
+        "@timestamp",
+        "asc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"programname\",\"negate\":false,\"params\":{\"query\":\"object-replicator\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"object-replicator\"},\"query\":{\"match\":{\"programname\":{\"query\":\"object-replicator\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"exists\":{\"field\":\"sysloghost\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"sysloghost\",\"negate\":false,\"type\":\"exists\",\"value\":\"exists\"}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"type\":\"phrases\",\"key\":\"message\",\"value\":\"Object replication complete\",\"params\":[\"Object replication complete\"],\"negate\":false,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"message\":\"Object replication complete\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "24bcb550-421a-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "5-2 SLO - PUT",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "programname",
+        "transaction_id",
+        "status_int",
+        "request_path"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"source\",\"value\":\"slo\",\"params\":{\"query\":\"slo\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"source\":{\"query\":\"slo\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"type\":\"phrase\",\"key\":\"status_int\",\"value\":\"200\",\"params\":{\"query\":\"200\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"status_int\":{\"query\":\"200\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"request_method\",\"value\":\"PUT\",\"params\":{\"query\":\"PUT\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"request_method\":{\"query\":\"PUT\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "04e0a0a0-370e-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "1-1 [Find Long Trans Time] GET requests time sorting",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "request_time",
+        "bytes_sent",
+        "transaction_id",
+        "request_path",
+        "avg_speed"
+      ],
+      "sort": [
+        "avg_speed",
+        "asc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"programname\",\"negate\":false,\"params\":{\"query\":\"proxy-server\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"proxy-server\"},\"query\":{\"match\":{\"programname\":{\"query\":\"proxy-server\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"request_method\",\"negate\":false,\"params\":{\"query\":\"GET\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"GET\"},\"query\":{\"match\":{\"request_method\":{\"query\":\"GET\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"status_int\",\"negate\":false,\"params\":{\"query\":\"200\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"200\"},\"query\":{\"match\":{\"status_int\":{\"query\":\"200\",\"type\":\"phrase\"}}}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"type\":\"phrases\",\"key\":\"request_path\",\"value\":\"auth/v1.0, $/\",\"params\":[\"auth/v1.0\",\"$/\"],\"negate\":true,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"request_path\":\"auth/v1.0\"}},{\"match_phrase\":{\"request_path\":\"$/\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "9c6edbe0-4455-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "[naming] Object-Auditor complete logs (ZBF)",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "AuditType",
+        "AuditCompletedSeconds",
+        "TotalAuditFilesPerSec",
+        "TotalAuditingTime",
+        "AuditRate",
+        "TotalAuditRate"
+      ],
+      "sort": [
+        "@timestamp",
+        "asc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"programname\",\"negate\":false,\"params\":{\"query\":\"object-auditor\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"object-auditor\"},\"query\":{\"match\":{\"programname\":{\"query\":\"object-auditor\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":true,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"sysloghost\",\"negate\":false,\"params\":{\"query\":\"sac-tellus-paco02\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"sac-tellus-paco02\"},\"query\":{\"match\":{\"sysloghost\":{\"query\":\"sac-tellus-paco02\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"AuditType\",\"negate\":false,\"params\":{\"query\":\"ZBF\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"ZBF\"},\"query\":{\"match\":{\"AuditType\":{\"query\":\"ZBF\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":true,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"AuditType\",\"negate\":false,\"params\":{\"query\":\"ALL\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"ALL\"},\"query\":{\"match\":{\"AuditType\":{\"query\":\"ALL\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"message\",\"negate\":false,\"params\":{\"query\":\"mode completed:\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"mode completed:\"},\"query\":{\"match\":{\"message\":{\"query\":\"mode completed:\",\"type\":\"phrase\"}}}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "91fdfa10-4455-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "[naming] Object-Auditor complete logs (ALL)",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "AuditType",
+        "AuditCompletedSeconds",
+        "TotalAuditFilesPerSec",
+        "TotalAuditingTime",
+        "AuditRate",
+        "TotalAuditRate"
+      ],
+      "sort": [
+        "@timestamp",
+        "asc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"programname\",\"negate\":false,\"params\":{\"query\":\"object-auditor\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"object-auditor\"},\"query\":{\"match\":{\"programname\":{\"query\":\"object-auditor\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":true,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"sysloghost\",\"negate\":false,\"params\":{\"query\":\"sac-tellus-paco02\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"sac-tellus-paco02\"},\"query\":{\"match\":{\"sysloghost\":{\"query\":\"sac-tellus-paco02\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":true,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"AuditType\",\"negate\":false,\"params\":{\"query\":\"ZBF\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"ZBF\"},\"query\":{\"match\":{\"AuditType\":{\"query\":\"ZBF\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"AuditType\",\"negate\":false,\"params\":{\"query\":\"ALL\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"ALL\"},\"query\":{\"match\":{\"AuditType\":{\"query\":\"ALL\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"message\",\"negate\":false,\"params\":{\"query\":\"mode completed:\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"mode completed:\"},\"query\":{\"match\":{\"message\":{\"query\":\"mode completed:\",\"type\":\"phrase\"}}}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "186957e0-421a-11e8-a543-0f193ce61c46",
+    "_type": "search",
+    "_source": {
+      "title": "5-1 SLO - GET",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "programname",
+        "transaction_id",
+        "status_int",
+        "request_path",
+        "source",
+        "user_agent"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"source\",\"value\":\"slo\",\"params\":{\"query\":\"slo\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"source\":{\"query\":\"slo\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"type\":\"phrase\",\"key\":\"status_int\",\"value\":\"200\",\"params\":{\"query\":\"200\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"status_int\":{\"query\":\"200\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"negate\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"type\":\"phrase\",\"key\":\"request_method\",\"value\":\"GET\",\"params\":{\"query\":\"GET\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"request_method\":{\"query\":\"GET\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "f00eb770-2bc8-11e8-a543-0f193ce61c46",
+    "_type": "visualization",
+    "_source": {
+      "title": "Proxy Throughput",
+      "visState": "{\"title\":\"Proxy Throughput\",\"type\":\"area\",\"params\":{\"type\":\"area\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Sum of bytes_recvd\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"area\",\"mode\":\"normal\",\"data\":{\"label\":\"Sum of bytes_recvd\",\"id\":\"1\"},\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"interpolate\":\"linear\",\"valueAxis\":\"ValueAxis-1\"},{\"show\":true,\"mode\":\"normal\",\"type\":\"area\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"interpolate\":\"linear\",\"data\":{\"id\":\"3\",\"label\":\"Sum of bytes_sent\"},\"valueAxis\":\"ValueAxis-1\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes_recvd\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"s\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes_sent\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"filter\":[{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"programname\",\"value\":\"proxy-server\",\"params\":{\"query\":\"proxy-server\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"programname\":{\"query\":\"proxy-server\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "a65d4fa0-2bdd-11e8-a543-0f193ce61c46",
+    "_type": "visualization",
+    "_source": {
+      "title": "Proxy Request Methods",
+      "visState": "{\"title\":\"Proxy Request Methods\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"request_method.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":100,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"filter\":[{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"programname\",\"value\":\"proxy-server\",\"params\":{\"query\":\"proxy-server\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"programname\":{\"query\":\"proxy-server\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "18f732e0-2bc7-11e8-a543-0f193ce61c46",
+    "_type": "visualization",
+    "_source": {
+      "title": "Top 10 User-Agents",
+      "visState": "{\"title\":\"Top 10 User-Agents\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"user_agent.keyword\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"key\":\"programname\",\"negate\":false,\"params\":{\"query\":\"proxy-server\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"proxy-server\"},\"query\":{\"match\":{\"programname\":{\"query\":\"proxy-server\",\"type\":\"phrase\"}}}},{\"meta\":{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"negate\":true,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"user_agent.keyword\",\"value\":\"-\",\"params\":{\"query\":\"-\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"user_agent.keyword\":{\"query\":\"-\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "073349e0-3d06-11e8-9d8e-2b53b276525d",
+    "_type": "visualization",
+    "_source": {
+      "title": "Max Request Times per Disk vs Request Method",
+      "visState": "{\"title\":\"Max Request Times per Disk vs Request Method\",\"type\":\"heatmap\",\"params\":{\"addLegend\":true,\"addTooltip\":true,\"colorSchema\":\"Greens\",\"colorsNumber\":4,\"colorsRange\":[],\"enableHover\":false,\"invertColors\":false,\"legendPosition\":\"right\",\"percentageMode\":false,\"setColorRange\":false,\"times\":[],\"type\":\"heatmap\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"color\":\"#555\",\"rotate\":0,\"show\":false},\"scale\":{\"defaultYExtents\":false,\"type\":\"linear\"},\"show\":false,\"type\":\"value\"}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"request_time\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"device_name.keyword\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":200,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"request_method.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 0.225\":\"rgb(247,252,245)\",\"0.225 - 0.45\":\"rgb(199,233,192)\",\"0.45 - 0.675\":\"rgb(116,196,118)\",\"0.675 - 0.9\":\"rgb(35,139,69)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "707d11d0-42c7-11e8-a543-0f193ce61c46",
+    "_type": "visualization",
+    "_source": {
+      "title": "[naming] Replication Cycle Time Comparison",
+      "visState": "{\"title\":\"[naming] Replication Cycle Time Comparison\",\"type\":\"horizontal_bar\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":true,\"style\":{\"color\":\"#eee\"},\"valueAxis\":\"ValueAxis-2\"},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":200},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Min. Rate\"}},{\"id\":\"ValueAxis-2\",\"name\":\"TopAxis-1\",\"type\":\"value\",\"position\":\"top\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":75,\"filter\":true,\"truncate\":100},\"title\":{\"text\":\"Cycle Time\"}}],\"seriesParams\":[{\"show\":true,\"type\":\"histogram\",\"mode\":\"normal\",\"data\":{\"label\":\"Avg. Cycle Time\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-2\",\"drawLinesBetweenPoints\":true,\"showCircles\":false,\"interpolate\":\"linear\",\"lineWidth\":3},{\"show\":true,\"mode\":\"normal\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"5\",\"label\":\"Max Cycle Time\"},\"valueAxis\":\"ValueAxis-2\"},{\"show\":true,\"mode\":\"normal\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"lineWidth\":6.5,\"data\":{\"id\":\"3\",\"label\":\"Avg. Rate\"},\"valueAxis\":\"ValueAxis-1\"},{\"show\":true,\"mode\":\"normal\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"4\",\"label\":\"Max Rate\"},\"valueAxis\":\"ValueAxis-1\"},{\"show\":true,\"mode\":\"normal\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"6\",\"label\":\"Min. Rate\"},\"valueAxis\":\"ValueAxis-1\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"top\",\"times\":[],\"addTimeMarker\":false,\"orderBucketsBySum\":false,\"radiusRatio\":51},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"TotalReplicatorTimeMinutes\",\"customLabel\":\"Avg. Cycle Time\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"TotalReplicatorTimeMinutes\",\"customLabel\":\"Max Cycle Time\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"PartitionReplicatedRate\",\"customLabel\":\"Avg. Rate\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"PartitionReplicatedRate\",\"customLabel\":\"Max Rate\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"PartitionReplicatedRate\",\"customLabel\":\"Min. Rate\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"sysloghost.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"asc\",\"orderBy\":\"_term\",\"customLabel\":\"Node\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Replication Cycle\":\"#CCA300\",\"Average PartitionReplicatedRate\":\"#629E51\",\"Max PartitionReplicatedRate\":\"#9AC48A\",\"Avg. Cycle Time\":\"#9AC48A\",\"Max Cycle Time\":\"#629E51\",\"Avg. Rate\":\"#F29191\",\"Max Rate\":\"#E24D42\",\"Min. Rate\":\"#FCE2DE\"},\"legendOpen\":true}}",
+      "description": "",
+      "savedSearchId": "7c1af530-42b7-11e8-a543-0f193ce61c46",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "18f31c10-42f0-11e8-a543-0f193ce61c46",
+    "_type": "visualization",
+    "_source": {
+      "title": "[naming] Proxy GET throughPUT",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"customBucket\":{\"enabled\":true,\"id\":\"1-bucket\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"@timestamp\",\"interval\":\"auto\",\"min_doc_count\":1},\"schema\":{\"aggFilter\":[],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"max\":null,\"min\":0,\"name\":\"bucketAgg\",\"params\":[],\"title\":\"Bucket Agg\"},\"type\":\"date_histogram\"},\"customMetric\":{\"enabled\":true,\"id\":\"1-metric\",\"params\":{\"customLabel\":\"Avg. Bytes/sec\",\"field\":\"avg_speed\"},\"schema\":{\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!percentile_ranks\",\"!median\",\"!std_dev\",\"!sum_bucket\",\"!avg_bucket\",\"!min_bucket\",\"!max_bucket\",\"!derivative\",\"!moving_avg\",\"!serial_diff\",\"!cumulative_sum\"],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"max\":null,\"min\":0,\"name\":\"metricAgg\",\"params\":[],\"title\":\"Metric Agg\"},\"type\":\"avg\"}},\"schema\":\"metric\",\"type\":\"avg_bucket\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"@timestamp\",\"interval\":\"auto\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"customLabel\":\"Flying Counts\"},\"schema\":\"metric\",\"type\":\"count\"}],\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"legendPosition\":\"top\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Overall Average of Avg. Bytes/sec\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"area\",\"valueAxis\":\"ValueAxis-1\"},{\"data\":{\"id\":\"3\",\"label\":\"Flying Counts\"},\"drawLinesBetweenPoints\":true,\"interpolate\":\"linear\",\"mode\":\"stacked\",\"show\":true,\"showCircles\":true,\"type\":\"area\",\"valueAxis\":\"ValueAxis-2\"}],\"times\":[],\"type\":\"area\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Overall Average of Avg. Bytes/sec\"},\"type\":\"value\"},{\"id\":\"ValueAxis-2\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"RightAxis-1\",\"position\":\"right\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Flying Counts\"},\"type\":\"value\"}]},\"title\":\"[naming] Proxy GET throughPUT\",\"type\":\"area\"}",
+      "uiStateJSON": "{\"spy\":{\"mode\":{\"name\":\"table\"}}}",
+      "description": "",
+      "savedSearchId": "04e0a0a0-370e-11e8-a543-0f193ce61c46",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "5fca4300-4455-11e8-a543-0f193ce61c46",
+    "_type": "visualization",
+    "_source": {
+      "title": "[naming] Auditing Time of all nodes",
+      "visState": "{\"title\":\"[naming] Auditing Time of all nodes\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100,\"rotate\":0},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"},\"valueAxis\":\"ValueAxis-1\"},\"legendPosition\":\"top\",\"seriesParams\":[{\"data\":{\"id\":\"2\",\"label\":\"Average TotalAuditingTime\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":true,\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"},{\"show\":true,\"mode\":\"normal\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"4\",\"label\":\"Max TotalAuditingTime\"},\"valueAxis\":\"ValueAxis-1\"},{\"show\":true,\"mode\":\"normal\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"5\",\"label\":\"Min TotalAuditingTime\"},\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"histogram\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Max TotalAuditingTime\"},\"type\":\"value\"}]},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"TotalAuditingTime\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"sysloghost.keyword\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":20,\"order\":\"asc\",\"orderBy\":\"_term\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"TotalAuditingTime\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"TotalAuditingTime\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"940f6b30-2bba-11e8-a543-0f193ce61c46\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "247fe650-447e-11e8-a543-0f193ce61c46",
+    "_type": "visualization",
+    "_source": {
+      "title": "[naming] GET request transfer speed",
+      "visState": "{\"title\":\"[naming] GET request transfer speed\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":130},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"legendPosition\":\"top\",\"seriesParams\":[{\"show\":true,\"mode\":\"normal\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"3\",\"label\":\"Bytes/sec\"},\"valueAxis\":\"ValueAxis-1\"},{\"show\":true,\"mode\":\"normal\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"4\",\"label\":\"Fastest Rate\"},\"valueAxis\":\"ValueAxis-1\"},{\"show\":true,\"mode\":\"normal\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"5\",\"label\":\"Slowest Rate\"},\"valueAxis\":\"ValueAxis-1\"},{\"data\":{\"id\":\"1\",\"label\":\"Average request_time\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-2\"}],\"times\":[],\"type\":\"histogram\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Bytes/sec\"},\"type\":\"value\"},{\"id\":\"ValueAxis-2\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"RightAxis-1\",\"position\":\"right\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Average request_time\"},\"type\":\"value\"}]},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"avg_speed\",\"customLabel\":\"Bytes/sec\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"avg_speed\",\"customLabel\":\"Fastest Rate\"}},{\"id\":\"5\",\"enabled\":true,\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"avg_speed\",\"customLabel\":\"Slowest Rate\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"request_time\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":false}}",
+      "description": "",
+      "savedSearchId": "04e0a0a0-370e-11e8-a543-0f193ce61c46",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "6064bc00-445a-11e8-a543-0f193ce61c46",
+    "_type": "visualization",
+    "_source": {
+      "title": "[naming] Total Auditing time pie",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"field\":\"sysloghost.keyword\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"order\":\"asc\",\"orderBy\":\"_term\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"size\":8},\"schema\":\"segment\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"field\":\"AuditType.keyword\",\"missingBucket\":true,\"missingBucketLabel\":\"Missing\",\"order\":\"desc\",\"orderBy\":\"_term\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"size\":2},\"schema\":\"segment\",\"type\":\"terms\"},{\"enabled\":true,\"id\":\"4\",\"params\":{\"field\":\"TotalAuditFilesPerSec\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"order\":\"desc\",\"orderAgg\":{\"enabled\":true,\"id\":\"4-orderAgg\",\"params\":{\"field\":\"TotalAuditFilesPerSec\"},\"schema\":{\"aggFilter\":[\"!top_hits\",\"!percentiles\",\"!median\",\"!std_dev\",\"!derivative\",\"!moving_avg\",\"!serial_diff\",\"!cumulative_sum\",\"!avg_bucket\",\"!max_bucket\",\"!min_bucket\",\"!sum_bucket\"],\"deprecate\":false,\"editor\":false,\"group\":\"none\",\"hideCustomLabel\":true,\"max\":null,\"min\":0,\"name\":\"orderAgg\",\"params\":[],\"title\":\"Order Agg\"},\"type\":\"avg\"},\"orderBy\":\"custom\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"size\":7},\"schema\":\"segment\",\"type\":\"terms\"}],\"params\":{\"addLegend\":true,\"addTooltip\":true,\"isDonut\":true,\"labels\":{\"last_level\":true,\"show\":false,\"truncate\":100,\"values\":true},\"legendPosition\":\"right\",\"type\":\"pie\"},\"title\":\"[naming] Total Auditing time pie\",\"type\":\"pie\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "07919390-43b6-11e8-a543-0f193ce61c46",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  }
+]
