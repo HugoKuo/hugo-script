@@ -1,0 +1,5 @@
+$PYTHON $SCRIPT --workers-per-device $WORKERS $RING $DEVICES $DISK_TARGETS \
+        --misplaced-only --request-node-count 10
+
+
+/opt/ss/bin/python find_handoff_parts_target.py         
